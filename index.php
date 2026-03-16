@@ -27,6 +27,12 @@ $reviews = $reviews_stmt->fetchAll();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
+
+        /* Add spacing between header and main content */
+        main {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
         /* Review Modal Styles */
         .review-modal {
             display: none;
@@ -470,6 +476,21 @@ $reviews = $reviews_stmt->fetchAll();
         body.dark-mode .reviewer {
             color: #b0b0b0;
         }
+
+        /* Add responsive spacing */
+        main {
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+
     </style>
 </head>
 <body>
@@ -513,7 +534,7 @@ $reviews = $reviews_stmt->fetchAll();
                 
                 <div class="metrics-container">
                     <div class="metric-item">
-                        <span class="metric-number" id="diseaseMetric">1,250+</span>
+                        <span class="metric-number" id="diseaseMetric">10+</span>
                         <span class="metric-label">Plant Diseases</span>
                     </div>
                     <div class="metric-item">
@@ -521,7 +542,7 @@ $reviews = $reviews_stmt->fetchAll();
                         <span class="metric-label">Accuracy Rate</span>
                     </div>
                     <div class="metric-item">
-                        <span class="metric-number">50K+</span>
+                        <span class="metric-number">2+</span>
                         <span class="metric-label">Happy Gardeners</span>
                     </div>
                     <div class="metric-item">

@@ -1,0 +1,796 @@
+/* ===== RESULTS PAGE STYLES - AGROSCAN ===== */
+/* No shared selectors - each element styled individually */
+
+/* Main content container */
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 30px 32px 60px;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.breadcrumb-link {
+    color: #1f5e3a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #0f3a24;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: #7a9a83;
+    font-size: 0.8rem;
+}
+
+.breadcrumb-current {
+    color: #5e7d68;
+}
+
+/* Results header */
+.results-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.results-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a4d2e;
+    margin: 0 0 10px 0;
+}
+
+.results-subtitle {
+    font-size: 1.2rem;
+    color: #2e5f3d;
+    margin: 0;
+}
+
+/* Results container - two column layout */
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.results-left {
+    flex: 1 1 350px;
+}
+
+.results-right {
+    flex: 2 1 600px;
+}
+
+/* Image card */
+.image-card {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 40, 0, 0.05);
+    border: 1px solid #daecd9;
+    margin-bottom: 20px;
+}
+
+.image-wrapper {
+    position: relative;
+    padding: 20px;
+    background: #f5f9f4;
+    text-align: center;
+}
+
+.plant-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.confidence-badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: #1f5e3a;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(31, 94, 58, 0.3);
+}
+
+.confidence-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.image-info {
+    padding: 20px;
+    background: white;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #1e3b2c;
+}
+
+.info-row i {
+    color: #1f5e3a;
+    width: 20px;
+}
+
+/* Quick actions card */
+.quick-actions-card {
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 40, 0, 0.05);
+    border: 1px solid #daecd9;
+    margin-bottom: 20px;
+}
+
+.quick-actions-title {
+    font-size: 1.2rem;
+    color: #1a4d2e;
+    margin: 0 0 15px 0;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.quick-action-btn {
+    background: #f5f9f4;
+    border: none;
+    border-radius: 16px;
+    padding: 12px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #1e4f32;
+}
+
+.quick-action-btn:hover {
+    background: #1f5e3a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.quick-action-btn i {
+    font-size: 1.3rem;
+}
+
+.quick-action-btn span {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Plant details card */
+.plant-details-card {
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 40, 0, 0.05);
+    border: 1px solid #daecd9;
+}
+
+.plant-details-title {
+    font-size: 1.2rem;
+    color: #1a4d2e;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.plant-details-title i {
+    color: #1f5e3a;
+}
+
+.plant-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0f0e0;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    flex: 0 0 120px;
+    color: #5e7d68;
+    font-weight: 500;
+}
+
+.detail-value {
+    flex: 1;
+    color: #1e4f32;
+    font-weight: 500;
+}
+
+/* Disease card */
+.disease-card {
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 40, 0, 0.05);
+    border: 1px solid #daecd9;
+    margin-bottom: 20px;
+}
+
+.disease-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.disease-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a4d2e;
+    margin: 0 0 5px 0;
+}
+
+.disease-scientific {
+    color: #5e7d68;
+    font-style: italic;
+    margin: 0;
+}
+
+.disease-type {
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.disease-type.fungal {
+    background: #fff2d4;
+    color: #9e6300;
+}
+
+.disease-type.bacterial {
+    background: #ffe1de;
+    color: #b13e30;
+}
+
+.disease-type.viral {
+    background: #e0e0ff;
+    color: #4a4a9e;
+}
+
+.disease-type.healthy {
+    background: #d4f0e0;
+    color: #1f7248;
+}
+
+/* Severity section */
+.severity-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.severity-label {
+    font-weight: 500;
+    color: #1e4f32;
+}
+
+.severity-indicator {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    max-width: 200px;
+}
+
+.severity-bar {
+    height: 12px;
+    width: 30px;
+    border-radius: 20px;
+    background: #e0f0e0;
+    transition: background 0.2s ease;
+}
+
+.severity-bar.high.active {
+    background: #b13e30;
+}
+
+.severity-bar.medium.active {
+    background: #f0b000;
+}
+
+.severity-bar.low.active {
+    background: #2e8b57;
+}
+
+.severity-text {
+    font-weight: 600;
+    color: #b13e30;
+}
+
+/* Section subheading */
+.section-subheading {
+    font-size: 1.1rem;
+    color: #1a4d2e;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-subheading i {
+    color: #1f5e3a;
+}
+
+.disease-description {
+    color: #2e5f3d;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===== RECOMMENDATIONS SECTION - UPDATED ===== */
+.recommendations-section {
+    background: white;
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 40, 0, 0.05);
+    border: 1px solid #daecd9;
+    margin-bottom: 20px;
+}
+
+.recommendations-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e0f0e0;
+    padding-bottom: 5px;
+}
+
+.tab-button {
+    padding: 12px 25px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7a9a83;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-button.active {
+    color: #1f5e3a;
+    background: #f0f9f0;
+}
+
+.tab-button:hover:not(.active) {
+    color: #1e4f32;
+    background: #f5f9f4;
+}
+
+.tab-content {
+    display: block;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+.recommendation-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0f0e0;
+}
+
+.recommendation-header i {
+    font-size: 1.5rem;
+    color: #1f5e3a;
+}
+
+.recommendation-header h4 {
+    font-size: 1.2rem;
+    color: #1a4d2e;
+    margin: 0;
+}
+
+.recommendation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recommendation-item {
+    background: #f9fff9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #1f5e3a;
+    transition: transform 0.2s ease;
+}
+
+.recommendation-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(31, 94, 58, 0.1);
+}
+
+.recommendation-item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.recommendation-icon {
+    color: #1f5e3a;
+    font-size: 1.2rem;
+}
+
+.recommendation-name {
+    font-size: 1.1rem;
+    color: #1a4d2e;
+}
+
+.recommendation-desc {
+    color: #2e5f3d;
+    line-height: 1.5;
+    margin: 0 0 10px 25px;
+}
+
+.recommendation-tip {
+    background: #f0f9f0;
+    border-radius: 12px;
+    padding: 10px 15px;
+    margin-left: 25px;
+    color: #1f5e3a;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.recommendation-tip i {
+    color: #f0b000;
+}
+
+/* Products grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 30, 0, 0.05);
+    border: 1px solid #e0f0e0;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(31, 94, 58, 0.15);
+    border-color: #1f5e3a;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    background: #f5f9f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2.2rem;
+    color: #1f5e3a;
+}
+
+.product-rating {
+    color: #f0b000;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.product-rating span {
+    color: #7a9a83;
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+/* Similar diseases section */
+.similar-section {
+    background: white;
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 40, 0, 0.05);
+    border: 1px solid #daecd9;
+    margin-bottom: 20px;
+}
+
+.similar-title {
+    font-size: 1.1rem;
+    color: #1a4d2e;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.similar-title i {
+    color: #1f5e3a;
+}
+
+.similar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.similar-item {
+    background: #f5f9f4;
+    border-radius: 16px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.similar-name {
+    font-weight: 600;
+    color: #1e4f32;
+}
+
+.similar-match {
+    font-size: 0.85rem;
+    color: #1f5e3a;
+    font-weight: 500;
+}
+
+/* Expert card */
+.expert-card {
+    background: linear-gradient(145deg, #f5f9f4, #e0f0e0);
+    border-radius: 30px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.expert-icon {
+    font-size: 2.5rem;
+    color: #1f5e3a;
+}
+
+.expert-content {
+    flex: 1;
+}
+
+.expert-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a4d2e;
+    margin: 0 0 5px 0;
+}
+
+.expert-text {
+    color: #2e5f3d;
+    margin: 0;
+}
+
+.expert-button {
+    background: #1f5e3a;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.expert-button:hover {
+    background: #154e2b;
+    transform: translateY(-2px);
+}
+
+/* No data alert */
+.no-data-alert {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 30px;
+    border-radius: 30px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.no-data-alert i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #856404;
+}
+
+.no-data-alert h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+.no-data-alert p {
+    margin: 0 0 20px 0;
+}
+
+.no-data-alert a {
+    display: inline-block;
+    background: #1f5e3a;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background 0.2s ease;
+}
+
+.no-data-alert a:hover {
+    background: #154e2b;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .results-title {
+        font-size: 2.2rem;
+    }
+    
+    .disease-name {
+        font-size: 1.8rem;
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .similar-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+    
+    .results-title {
+        font-size: 2rem;
+    }
+    
+    .results-subtitle {
+        font-size: 1rem;
+    }
+    
+    .disease-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .recommendations-tabs {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .tab-button {
+        width: 100%;
+        justify-content: center;
+        border-radius: 40px;
+    }
+    
+    .severity-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .severity-indicator {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .expert-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .expert-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .detail-label {
+        flex: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .results-title {
+        font-size: 1.8rem;
+    }
+    
+    .recommendation-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .recommendation-desc {
+        margin-left: 0;
+    }
+    
+    .recommendation-tip {
+        margin-left: 0;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

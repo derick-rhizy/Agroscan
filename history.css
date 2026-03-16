@@ -1,0 +1,384 @@
+/* ===== HISTORY PAGE STYLES - AGROSCAN ===== */
+/* No shared selectors - each element styled individually */
+
+/* Main content container */
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+    min-height: calc(100vh - 200px);
+}
+
+/* Page header */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a4d2e;
+    margin: 0 0 10px 0;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #2e5f3d;
+    margin: 0;
+}
+
+/* History stats */
+.history-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-box {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0, 40, 0, 0.05);
+    border: 1px solid #daecd9;
+}
+
+.stat-box i {
+    font-size: 2.5rem;
+    color: #1f5e3a;
+    background: #f0f9f0;
+    padding: 15px;
+    border-radius: 16px;
+}
+
+.stat-box div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a4d2e;
+    line-height: 1.2;
+}
+
+.stat-label {
+    color: #5e7d68;
+    font-size: 0.9rem;
+}
+
+/* Filter section */
+.filter-section {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #daecd9;
+}
+
+.search-box {
+    flex: 2;
+    min-width: 250px;
+    max-width: 400px;
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7a9a83;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 2px solid #e0f0e0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #1f5e3a;
+    box-shadow: 0 0 0 3px rgba(31, 94, 58, 0.1);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid #e0f0e0;
+    border-radius: 40px;
+    background: white;
+    color: #2e5f3d;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #f0f9f0;
+    border-color: #1f5e3a;
+}
+
+.filter-btn.active {
+    background: #1f5e3a;
+    color: white;
+    border-color: #1f5e3a;
+}
+
+#clearHistory {
+    background: #fff3e0;
+    color: #b13e30;
+    border-color: #ffcd94;
+}
+
+#clearHistory:hover {
+    background: #ffe4b5;
+}
+
+/* History grid */
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* History card */
+.history-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 30, 0, 0.05);
+    border: 1px solid #daecd9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(31, 94, 58, 0.15);
+}
+
+.card-image {
+    height: 200px;
+    background: #f5f9f4;
+    position: relative;
+    overflow: hidden;
+}
+
+.scan-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scan-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #1f5e3a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.disease-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a4d2e;
+    margin: 0 0 5px 0;
+}
+
+.scan-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #5e7d68;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.scan-meta i {
+    color: #1f5e3a;
+    margin-right: 5px;
+}
+
+.confidence-bar {
+    background: #e0f0e0;
+    height: 8px;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: #1f5e3a;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0f0e0;
+}
+
+.view-details-btn {
+    background: none;
+    border: none;
+    color: #1f5e3a;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+.view-details-btn:hover {
+    color: #0f3a24;
+}
+
+.delete-scan {
+    color: #c62828;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.delete-scan:hover {
+    opacity: 1;
+}
+
+/* No history message */
+.no-history {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 30px;
+    border: 2px dashed #daecd9;
+}
+
+.no-history i {
+    font-size: 5rem;
+    color: #c0e0c0;
+    margin-bottom: 20px;
+}
+
+.no-history h3 {
+    font-size: 1.8rem;
+    color: #1a4d2e;
+    margin: 0 0 10px 0;
+}
+
+.no-history p {
+    color: #5e7d68;
+    margin-bottom: 25px;
+}
+
+.scan-now-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1f5e3a;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.scan-now-btn:hover {
+    background: #154e2b;
+    transform: translateY(-2px);
+}
+
+/* Loading message */
+.loading-message {
+    text-align: center;
+    padding: 60px;
+    color: #7a9a83;
+}
+
+.loading-message i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .history-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-section {
+        flex-direction: column;
+    }
+    
+    .filter-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+

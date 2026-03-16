@@ -1,0 +1,80 @@
+/* ===== HEADER STYLES - AGROSCAN ===== */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: #27ae60;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.navigation-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #27ae60;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn, .register-btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+}
+
+.login-btn {
+    background: transparent;
+    color: #27ae60;
+    border: 2px solid #27ae60;
+}
+
+.register-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+

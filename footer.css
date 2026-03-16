@@ -1,0 +1,188 @@
+/* ===== FOOTER STYLES - AGROSCAN ===== */
+/* No shared selectors - each element styled individually */
+
+/* Footer main container */
+footer {
+    background-color: #dff0db;
+    border-radius: 60px 60px 0 0;
+    margin-top: 80px;
+    padding: 48px 32px 28px;
+    color: #173b24;
+}
+
+/* Footer inner wrapper */
+.footer-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Footer grid container */
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 60px;
+    margin-bottom: 40px;
+}
+
+/* Footer about section */
+.footer-about {
+    flex: 2 1 260px;
+}
+
+/* Footer logo container */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+/* Footer logo icon */
+.footer-logo-icon {
+    font-size: 2rem;
+    color: #1f5e3a;
+}
+
+/* Footer logo text */
+.footer-logo-text {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #154e2b;
+    text-decoration: none;
+}
+
+/* Footer description */
+.footer-description {
+    max-width: 360px;
+    margin: 20px 0 24px;
+    color: #2e5f3d;
+    line-height: 1.6;
+}
+
+/* Contact support button */
+.contact-support-btn {
+    background: white;
+    border: none;
+    border-radius: 60px;
+    padding: 12px 32px;
+    font-weight: 600;
+    color: #21633e;
+    box-shadow: 0 4px 12px rgba(0,30,0,0.05);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.15s;
+}
+
+.contact-support-btn:hover {
+    background: #f5fff0;
+}
+
+/* Quick links section */
+.footer-quick-links {
+    flex: 1 1 140px;
+}
+
+/* Resources section */
+.footer-resources {
+    flex: 1 1 140px;
+}
+
+/* Connect section */
+.footer-connect {
+    flex: 1 1 200px;
+}
+
+/* Footer section heading */
+.footer-heading {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #0d3e21;
+    font-weight: 600;
+}
+
+/* Footer links list */
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Footer list item */
+.footer-list-item {
+    margin-bottom: 12px;
+}
+
+/* Footer link */
+.footer-link {
+    text-decoration: none;
+    color: #2e623f;
+    font-weight: 450;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #0d4d26;
+    border-bottom: 1px solid #0d4d26;
+}
+
+/* Contact info item */
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+    color: #1b482b;
+}
+
+/* Contact icon */
+.contact-icon {
+    width: 24px;
+    color: #1c6e3e;
+}
+
+/* Contact text */
+.contact-text {
+    margin: 0;
+}
+
+/* Copyright section */
+.copyright-section {
+    text-align: center;
+    border-top: 1px solid #b6d6b6;
+    padding-top: 30px;
+    margin-top: 20px;
+    color: #366f48;
+    font-size: 0.9rem;
+}
+
+/* Copyright text */
+.copyright-text {
+    margin: 0;
+}
+
+/* Heart icon */
+.heart-icon {
+    color: #c44545;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+/* Responsive footer */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 32px 20px 20px;
+        border-radius: 40px 40px 0 0;
+    }
+    
+    .footer-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-about {
+        flex: 1 1 auto;
+    }
+}
+

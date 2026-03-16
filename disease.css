@@ -1,0 +1,500 @@
+/* ===== DISEASES PAGE STYLES - AGROSCAN ===== */
+/* No shared selectors - each element styled individually */
+
+/* Main content */
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a4d2e;
+    margin: 0 0 10px 0;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #2e5f3d;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 40, 0, 0.05);
+    border: 1px solid #daecd9;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 20px 14px 45px;
+    border: 2px solid #e0f0e0;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* THIS IS KEY - prevents padding from adding to width */
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #1f5e3a;
+    box-shadow: 0 0 0 3px rgba(31, 94, 58, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7a9a83;
+    z-index: 1; /* Ensures icon stays above input */
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 20px 14px 45px;
+    border: 2px solid #e0f0e0;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #1f5e3a;
+    box-shadow: 0 0 0 3px rgba(31, 94, 58, 0.1);
+}
+
+.filter-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* This helps distribute space */
+}
+
+/* Add this new rule to ensure the reset button doesn't force a line break */
+.reset-filters-btn {
+    padding: 12px 25px;
+    background: #f5f9f4;
+    border: 1px solid #daecd9;
+    border-radius: 12px;
+    color: #1f5e3a;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap; /* This prevents the button text from wrapping */
+}
+
+/* Also ensure select elements have a reasonable max-width */
+.filter-select {
+    flex: 1 1 200px; /* This allows them to grow but also shrink */
+    min-width: 160px; /* Slightly reduced from 200px */
+    max-width: 250px; /* Prevents them from becoming too wide */
+    padding: 12px 15px;
+    border: 2px solid #e0f0e0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #1e3b2c;
+    background: white;
+    cursor: pointer;
+}
+
+.filter-select {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: 2px solid #e0f0e0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #1e3b2c;
+    background: white;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #1f5e3a;
+}
+
+.reset-filters-btn {
+    padding: 12px 25px;
+    background: #f5f9f4;
+    border: 1px solid #daecd9;
+    border-radius: 12px;
+    color: #1f5e3a;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.reset-filters-btn:hover {
+    background: #1f5e3a;
+    color: white;
+}
+
+/* Results Stats */
+.results-stats {
+    margin-bottom: 25px;
+    padding: 10px 0;
+    border-bottom: 2px solid #e0f0e0;
+}
+
+.results-count {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1f5e3a;
+    margin-right: 5px;
+}
+
+.results-label {
+    font-size: 1.1rem;
+    color: #2e5f3d;
+}
+
+/* Disease Grid */
+.disease-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Disease Card */
+.disease-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 30, 0, 0.05);
+    border: 1px solid #daecd9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.disease-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(31, 94, 58, 0.15);
+}
+
+.card-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: #f5f9f4;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.disease-card:hover .card-image {
+    transform: scale(1.08);
+}
+
+.disease-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 15px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.disease-badge.fungal {
+    background: #fff2d4;
+    color: #9e6300;
+}
+
+.disease-badge.bacterial {
+    background: #ffe1de;
+    color: #b13e30;
+}
+
+.disease-badge.viral {
+    background: #e0e0ff;
+    color: #4a4a9e;
+}
+
+.disease-badge.oomycete {
+    background: #d4f0e0;
+    color: #1f7248;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a4d2e;
+    margin: 0 0 8px 0;
+}
+
+.card-plants {
+    color: #1f5e3a;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.card-plants i {
+    margin-right: 5px;
+}
+
+.card-description {
+    color: #2e5f3d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0f0e0;
+}
+
+.severity-indicator {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 40px;
+}
+
+.severity-indicator.high {
+    background: #ffe1de;
+    color: #b13e30;
+}
+
+.severity-indicator.medium {
+    background: #fff2d4;
+    color: #9e6300;
+}
+
+.severity-indicator.low {
+    background: #d4f0e0;
+    color: #1f7248;
+}
+
+.details-link {
+    color: #1f5e3a;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.2s ease;
+}
+
+.details-link:hover {
+    gap: 10px;
+    color: #0f3a24;
+}
+
+/* Hidden Cards (for Load More) */
+.hidden-card {
+    display: none;
+}
+
+/* Load More Button */
+.load-more-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.load-more-btn {
+    background: white;
+    color: #1f5e3a;
+    border: 2px solid #1f5e3a;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background: #1f5e3a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(31, 94, 58, 0.2);
+}
+
+.load-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.load-more-btn:hover i {
+    transform: rotate(180deg);
+}
+
+/* Help Section */
+.help-section {
+    background: linear-gradient(145deg, #1f5e3a, #154e2b);
+    border-radius: 40px;
+    padding: 60px 40px;
+    margin-top: 60px;
+}
+
+.help-content {
+    text-align: center;
+    color: white;
+}
+
+.help-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+.help-text {
+    font-size: 1.2rem;
+    margin: 0 0 30px 0;
+    opacity: 0.9;
+}
+
+.help-scan-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: #1f5e3a;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.help-scan-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .filter-container {
+        flex-direction: column;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .reset-filters-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .disease-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .help-section {
+        padding: 40px 20px;
+    }
+    
+    .help-title {
+        font-size: 1.6rem;
+    }
+}
+
+/* No Results Message */
+.no-results-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9fff9;
+    border-radius: 30px;
+    border: 2px dashed #daecd9;
+}
+
+.no-results-message i {
+    font-size: 4rem;
+    color: #7a9a83;
+    margin-bottom: 20px;
+}
+
+.no-results-message h3 {
+    font-size: 1.8rem;
+    color: #1a4d2e;
+    margin-bottom: 10px;
+}
+
+.no-results-message p {
+    color: #2e5f3d;
+    margin-bottom: 25px;
+}
+
+.no-results-message .reset-filters-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+    background: #1f5e3a;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.no-results-message .reset-filters-btn:hover {
+    background: #154e2b;
+    transform: translateY(-2px);
+}
+
